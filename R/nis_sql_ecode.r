@@ -21,7 +21,7 @@ nis_sql_ecode <- function(year, nis_path="~/NIS", ecodes) {
 	db_path <- gsub("y_", toString(year), db_path)
 
   # Connection
-  con <- RSQLite::dbConnect(SQLite(), db_path)
+  con <- RSQLite::dbConnect(RSQLite::SQLite(), db_path)
   
   nis_ecodes_query <- "SELECT * FROM core_y_ WHERE ECODE1 IN ecodes OR ECODE2 IN ecodes OR ECODE3 IN ecodes OR ECODE4 IN ecodes"; 
   

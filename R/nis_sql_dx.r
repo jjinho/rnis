@@ -21,7 +21,7 @@ nis_sql_dx <- function(year, nis_path="~/NIS", dx_codes) {
 	db_path <- gsub("y_", toString(year), db_path)
 	
   # Connection
-  con <- RSQLite::dbConnect(SQLite(), db_path)
+  con <- RSQLite::dbConnect(RSQLite::SQLite(), db_path)
   
   if(year > 2008) {
     # Years that have 25 DXs

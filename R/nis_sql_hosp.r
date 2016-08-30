@@ -13,7 +13,7 @@ nis_sql_hosp <- function(year, nis_path="~/NIS") {
 	db_path <- gsub("y_", toString(year), db_path)
 
   # Connection
-  con <- RSQLite::dbConnect(SQLite(), db_path)
+  con <- RSQLite::dbConnect(RSQLite::SQLite(), db_path)
   
 	nis_hospital_query <- "SELECT * FROM hospital_y_;"
 	

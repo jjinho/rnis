@@ -21,7 +21,7 @@ nis_sql_pr <- function(year, nis_path="~/NIS", pr_codes) {
 	db_path <- gsub("y_", toString(year), db_path)
 	
   # Connection
-  con <- RSQLite::dbConnect(SQLite(), db_path)
+  con <- RSQLite::dbConnect(RSQLite::SQLite(), db_path)
   
   nis_core_query <- "SELECT * FROM core_y_ WHERE PR1 IN pr_codes OR PR2 IN pr_codes OR PR3 IN pr_codes OR PR4 IN pr_codes OR PR5 IN pr_codes OR PR6 IN pr_codes OR PR7 IN pr_codes OR PR8 IN pr_codes OR PR9 IN pr_codes OR PR10 IN pr_codes OR PR11 IN pr_codes OR PR12 IN pr_codes OR PR13 IN pr_codes OR PR14 IN pr_codes OR PR15 IN pr_codes"; 
   
