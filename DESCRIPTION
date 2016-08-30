@@ -8,6 +8,7 @@ Description: A collection of R functions to query and clean NIS 2005 - 2012
 Depends: R(>= 3.2.5)
 Imports: 
 	dplyr,
+	magrittr,
 	RSQLite,
 	DBI
 License: MIT + file License
