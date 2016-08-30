@@ -112,9 +112,9 @@ nis_sql_pr <- function(year, nis_path="~/NIS", pr_codes) {
 
 	# Merge core_df and sev_df
 	if(year == 2012) {
-		core_df <- dplyr::merge(core_df, sev_df, by="KEY_NIS")	
+		core_df <- merge(core_df, sev_df, by="KEY_NIS")	
 	} else {
-		core_df <- dplyr::merge(core_df, sev_df, by="KEY")
+		core_df <- merge(core_df, sev_df, by="KEY")
 	}
 	rm(sev_df)
 	

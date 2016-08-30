@@ -111,9 +111,9 @@ nis_sql_ecode <- function(year, nis_path="~/NIS", ecodes) {
 
 	# Merge ecode_df and sev_df
 	if(year == 2012) {
-		ecode_df <- dplyr::merge(ecode_df, sev_df, by="KEY_NIS")	
+		ecode_df <- merge(ecode_df, sev_df, by="KEY_NIS")	
 	} else {
-		ecode_df <- dplyr::merge(ecode_df, sev_df, by="KEY")
+		ecode_df <- merge(ecode_df, sev_df, by="KEY")
 	}
 	rm(sev_df)
 	
