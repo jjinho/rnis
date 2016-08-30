@@ -6,13 +6,12 @@ Authors@R: person("Paul", "Chung", email="jinho326@gmail.com",
 Description: A collection of R functions to query and clean NIS 2005 - 2012 
 	data stored in DB files. 
 Depends: 
-	R(>= 3.2.5),
+	R(>= 3.2.5)
+Imports: 
 	dplyr,
 	magrittr,
 	RSQLite,
 	DBI
-Imports: 
-	magrittr,
 License: MIT + file License
 Encoding: UTF-8
 LazyData: true
