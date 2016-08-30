@@ -10,6 +10,8 @@ Depends:
 Imports: 
 	dplyr,
 	Rcpp,
+	assertthat,
+	tibble,
 	magrittr,
 	RSQLite,
 	DBI
