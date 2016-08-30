@@ -209,7 +209,7 @@ nis_sql_dx <- function(year, nis_path="~/NIS", dx_codes) {
 	
 	# Van Walraven Score
 	# Calculating the Elixhauser-van Walraven Comorbidity Composite Score
-	core_df <- core_df dplyr::`%>%`
+	core_df <- core_df %>%
 		dplyr::mutate(vanwalraven = ifelse(CM_AIDS			== "Y", 0,	0) +
 																ifelse(CM_ALCOHOL		== "Y", 0,	0) +
 																ifelse(CM_ANEMDEF		== "Y", -2,	0) +
@@ -239,7 +239,7 @@ nis_sql_dx <- function(year, nis_path="~/NIS", dx_codes) {
 																ifelse(CM_ULCER			== "Y", 0,	0) +
 																ifelse(CM_VALVE			== "Y", -1,	0) +
 																ifelse(CM_WGHTLOSS	== "Y", 6,	0))												
-	
+																
 	if(year == 2005) {
 		core_df$ZIPInc_Qrtl <- relevel_zipinc_qrtl_(	core_df$ZIPInc_Qrtl)
 	} else {

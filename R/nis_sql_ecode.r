@@ -203,7 +203,7 @@ nis_sql_ecode <- function(year, nis_path="~/NIS", ecodes) {
 	
 	# Van Walraven Score
 	# Calculating the Elixhauser-van Walraven Comorbidity Composite Score
-	ecode_df <- ecode_df dplyr::`%>%`
+	ecode_df <- ecode_df %>%
 		dplyr::mutate(vanwalraven = ifelse(CM_AIDS			== "Y", 0,	0) +
 																ifelse(CM_ALCOHOL		== "Y", 0,	0) +
 																ifelse(CM_ANEMDEF		== "Y", -2,	0) +
