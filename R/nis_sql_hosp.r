@@ -9,7 +9,7 @@
 #' nis_sql_hosp(year)
 nis_sql_hosp <- function(year, nis_path="~/NIS") {  
   # Get path to DB by year
-	db_path <- gsub("path", nis_path, "path/y_/nis_y.db")
+	db_path <- gsub("path", nis_path, "path/y_/nis_y_.db")
 	db_path <- gsub("y_", toString(year), db_path)
 
   # Connection

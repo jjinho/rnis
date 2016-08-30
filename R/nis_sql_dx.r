@@ -17,7 +17,7 @@ nis_sql_dx <- function(year, nis_path="~/NIS", dx_codes) {
   dx_codes <- paste("(", toString(paste("'", dx_codes, "'", sep="")), ")", sep="")
   
   # Get path to DB by year
-  db_path <- gsub("path", nis_path, "path/y_/nis_y.db")
+  db_path <- gsub("path", nis_path, "path/y_/nis_y_.db")
 	db_path <- gsub("y_", toString(year), db_path)
 	
   # Connection

@@ -17,7 +17,7 @@ nis_sql_ecode <- function(year, nis_path="~/NIS", ecodes) {
   ecodes <- paste("(", toString(paste("'", ecodes, "'", sep="")), ")", sep="")
   
   # Get path to DB by year
-  db_path <- gsub("path", nis_path, "path/y_/nis_y.db")
+  db_path <- gsub("path", nis_path, "path/y_/nis_y_.db")
 	db_path <- gsub("y_", toString(year), db_path)
 
   # Connection
