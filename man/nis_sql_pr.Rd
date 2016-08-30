@@ -4,10 +4,12 @@
 \alias{nis_sql_pr}
 \title{Query NIS SQLite Core and Severity Files by Year and Procedural ICD9 Codes}
 \usage{
-nis_sql_pr(year, pr_codes)
+nis_sql_pr(year, nis_path = "~/NIS", pr_codes)
 }
 \arguments{
 \item{year}{NIS Year}
+
+\item{nis_path}{Path to the NIS DB files. Defaults to "~/NIS"}
 
 \item{pr_codes}{List of ICD9 procedures given as strings}
 }

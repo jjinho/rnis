@@ -4,10 +4,12 @@
 \alias{nis_sql_ecode}
 \title{Query NIS SQLite Core and Severity Files by Year and ICD9 E Codes}
 \usage{
-nis_sql_ecode(year, ecodes)
+nis_sql_ecode(year, nis_path = "~/NIS", ecodes)
 }
 \arguments{
 \item{year}{NIS Year}
+
+\item{nis_path}{Path to the NIS DB files. Defaults to "~/NIS"}
 
 \item{ecodes}{List of ICD9 procedures given as strings}
 }

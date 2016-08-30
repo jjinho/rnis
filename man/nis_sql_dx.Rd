@@ -4,10 +4,12 @@
 \alias{nis_sql_dx}
 \title{Query NIS SQLite Core and Severity Files by Year and Diagnostic ICD9 Codes}
 \usage{
-nis_sql_dx(year, dx_codes)
+nis_sql_dx(year, nis_path = "~/NIS", dx_codes)
 }
 \arguments{
 \item{year}{NIS Year}
+
+\item{nis_path}{Path to the NIS DB files. Defaults to "~/NIS"}
 
 \item{dx_codes}{List of ICD9 diagnoses given as strings}
 }
