@@ -2,12 +2,13 @@
 #'
 #' Query NIS by year and ICD9 codes and returns a Dataframe of the Core and Severity data
 #' @param year NIS Year
-#' @param pr_codes List of ICD9 procedures given as strings
+#' @param pr_codes		List of ICD9 procedures given as strings
+#' @param nis_path		Path to the NIS DB files. Defaults to "~/NIS"
 #' @keywords nis
 #' @export
 #' @examples
 #' nis_sql_pr(year, pr_codes)
-nis_sql_pr <- function(year, pr_codes) {
+nis_sql_pr <- function(year, nis_path="~/NIS", pr_codes) {
   # Preprocess the ICD9 list
   # Remove all periods
   pr_codes <- gsub("\\.", "", pr_codes)
@@ -16,7 +17,8 @@ nis_sql_pr <- function(year, pr_codes) {
   pr_codes <- paste("(", toString(paste("'", pr_codes, "'", sep="")), ")", sep="")
   
   # Get path to DB by year
-  db_path <- gsub("y_", toString(year), "~/NIS/y_/nis_y_.db")
+	db_path <- gsub("path", nis_path, "path/y_/nis_y.db")
+	db_path <- gsub("y_", toString(year), db_path)
 	
   # Connection
   con <- RSQLite::dbConnect(SQLite(), db_path)
